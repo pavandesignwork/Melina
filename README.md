@@ -1,5 +1,7 @@
 # Index Second Brain
 
+![Index Second Brain](assets/banner.png)
+
 A free, open-source company knowledge system for Claude.
 
 Point Claude at this folder and it becomes a company brain that reads, writes, and organises your team's knowledge — decisions, projects, processes, people. No accounts. No API keys. No configuration beyond Claude Desktop.
