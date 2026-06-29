@@ -4,15 +4,15 @@ A free, open-source company knowledge starter kit for Claude.
 
 Download the folder, point Claude at it, and you have a company brain that reads, writes, and organises everything — no accounts, no API keys, no setup beyond Claude Desktop.
 
-> Built on top of [02ui/secondbrain](https://github.com/02ui/secondbrain) · MIT licensed · Free forever
+> Built by [Index Brain](https://index.brain) · MIT licensed · Free forever
 
 ---
 
 ## What this is
 
-[02ui/secondbrain](https://github.com/02ui/secondbrain) is a brilliant personal knowledge system for individuals. This is the **company version** — same idea, built for teams.
+A company knowledge system built for teams. Your decisions, processes, active projects, and institutional knowledge — all in one folder Claude can read, write, and organise.
 
-The difference: instead of one person's notes, this brain holds your company's decisions, processes, active projects, and institutional knowledge. Claude reads everything in context and works like a team member who actually remembers what was agreed last month.
+Claude reads everything in context and works like a team member who actually remembers what was agreed last month.
 
 ---
 
@@ -96,7 +96,7 @@ These are the difference between a brain that knows your company and a folder fu
 
 ## Decisions get their own folder
 
-Most second brain templates treat decisions like any other note. This one doesn't.
+Most knowledge systems treat decisions like any other note. This one doesn't.
 
 Decisions go in `03-decisions/` with a dated filename and their reasoning captured — what was decided, why, what alternatives were considered, who was involved. Six months later when someone asks "why did we pick X over Y?", the answer is there.
 
@@ -114,4 +114,4 @@ MIT. Free to use, change, share, and build on. See `LICENSE`.
 
 ---
 
-Made with [Index Brain](https://index.brain) · Built on [02ui/secondbrain](https://github.com/02ui/secondbrain)
+Made by [Index Brain](https://index.brain)
