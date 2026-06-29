@@ -1,35 +1,44 @@
 # Index Second Brain
 
-A free, open-source company knowledge starter kit for Claude.
+A free, open-source company knowledge system for Claude.
 
-Download the folder, point Claude at it, and you have a company brain that reads, writes, and organises everything — no accounts, no API keys, no setup beyond Claude Desktop.
+Point Claude at this folder and it becomes a company brain that reads, writes, and organises your team's knowledge — decisions, projects, processes, people. No accounts. No API keys. No configuration beyond Claude Desktop.
 
-> Built by [Index Brain](https://index.brain) · MIT licensed · Free forever
+**Free forever · MIT licensed · Made by [Index Brain](https://index.brain)**
 
 ---
 
-## What this is
+## How it works
 
-A company knowledge system built for teams. Your decisions, processes, active projects, and institutional knowledge — all in one folder Claude can read, write, and organise.
+Every session, Claude reads `brain.md` and loads the context from `company.md` and `brand.md`. It knows who you are, what you're building, and how you communicate — without you explaining it again.
 
-Claude reads everything in context and works like a team member who actually remembers what was agreed last month.
+Drop raw thoughts into `capture/inbox.md` throughout the day. When you're ready, say **"process the inbox"** — Claude groups, cleans, and files everything into the right folder, showing you the plan before touching anything.
+
+Decisions get their own folder. Projects live in `active/` until they're done, then move to `archive/`. The team roster lives in `team/`. Nothing gets deleted.
 
 ---
 
 ## Requirements
 
-- **Claude Desktop** (macOS Apple Silicon or Windows)
+- **Claude Desktop** — macOS Apple Silicon or Windows
 - A **paid Claude plan** — Pro, Max, Team, or Enterprise
-- Nothing else. No API keys. No accounts. No installs.
+- Nothing else
 
 ---
 
-## Quick start
+## Get started
 
-1. **Download** this folder (click "Code → Download ZIP" on GitHub) and move it somewhere permanent — not your Downloads folder.
-2. **Open Claude Desktop**, go to the Cowork tab, and point a session at this folder.
-3. **Say "run onboarding."** Claude asks you a handful of questions about your company and fills in the two foundation files for you. Takes about 5 minutes.
-4. **Start working.** Drop ideas in `01-ideas/inbox.md`. Say "process the inbox" when you're ready to organise them.
+**1. Download**
+Click **Code → Download ZIP**, unzip it, move the folder somewhere permanent.
+
+**2. Connect**
+Open Claude Desktop → Cowork tab → point a session at this folder.
+
+**3. Set up**
+Say **"set up the brain"**. Claude asks about your company — name, team, focus, communication style — and fills in the two core files. Takes about 5 minutes. Everything is skippable.
+
+**4. Work**
+Drop notes in `capture/inbox.md`. Say "process the inbox" to file them. Ask Claude anything about your company and it answers from the files.
 
 ---
 
@@ -37,80 +46,78 @@ Claude reads everything in context and works like a team member who actually rem
 
 ```
 index-second-brain/
-├── README.md              you are here
-├── claude.md              instructions Claude reads at the start of every session
-├── ONBOARDING.md          the one-time company setup interview Claude runs for you
-├── about-company.md       who you are as a company (blank, filled by onboarding)
-├── voice-and-brand.md     how your company writes and sounds (blank, filled by onboarding)
-├── 01-ideas/
-│   └── inbox.md           dump raw thoughts here, unsorted
-├── 02-projects/           active work with a finish line
-├── 03-decisions/          key decisions with reasoning, dated and kept forever
-├── 04-wiki/               evergreen knowledge the team looks things up in
-├── 05-resources/          reference material you collect
-└── 06-archive/            finished or paused work, out of the way
+├── brain.md          instructions Claude reads every session
+├── SETUP.md          the one-time company setup Claude runs for you
+├── company.md        who you are — team, stage, current focus
+├── brand.md          how your company sounds and writes
+├── capture/
+│   └── inbox.md      raw input — dump anything here, unsorted
+├── active/           projects currently in progress
+├── decisions/        every decision made, with reasoning, dated
+├── knowledge/        things the team looks up — processes, how-tos
+├── library/          reference material and links
+├── team/
+│   └── roster.md     who's on the team and what they own
+└── archive/          finished and paused work — nothing deleted
 ```
-
-Folders are numbered so they sort in the order you actually use them: capture → process → reference → archive.
 
 ---
 
-## How it works
-
-**Drop raw notes in the inbox**
+## The capture → file loop
 
 ```
-01-ideas/inbox.md
+capture/inbox.md   ←  drop anything here, any time
+       │
+       │  "process the inbox"
+       ▼
+Claude groups and cleans the notes
+       │
+       ├──► active/        if it's a project or active task
+       ├──► decisions/     if a decision was made
+       ├──► knowledge/     if it's something to look up later
+       └──► library/       if it's reference material
 ```
 
-Paste anything — a rough idea, a link, a decision you just made, something a customer said. Don't organise it. Just dump it.
-
-**Say "process the inbox"**
-
-Claude reads everything, groups related notes, cleans each one up, and files them into the right folder. It shows you the plan before moving anything.
-
-**Find anything later**
-
-Every decision lives in `03-decisions/` with its reasoning and date. Every piece of evergreen knowledge lives in `04-wiki/`. Projects move to `06-archive/` when they're done — nothing gets deleted.
+Claude shows the plan before filing anything. You confirm, then it moves.
 
 ---
 
-## What onboarding does
+## Decisions are first class
 
-This brain ships blank on purpose. The first time you connect it, Claude notices the foundation files are empty and offers to set them up. Say yes and it interviews you — your company name, what you build, who you serve, your team size, your current focus, and how your company writes. No form to fill in. Everything is skippable.
+Most systems treat a decision like any other note. This one doesn't.
 
-When onboarding is done, every Claude session starts with full context: who you are, what you're building, what's active, and how to sound like you.
+Every decision goes in `decisions/` with a dated filename — `decisions/2026-06-29-chose-stripe.md` — and includes what was decided, why, what was considered and rejected, and who was involved.
+
+Six months later when someone asks "why did we go with Stripe?" — the answer is in the file.
 
 ---
 
-## The two foundation files
+## The two core files
 
 | File | What it does |
 |---|---|
-| `about-company.md` | Tells Claude who it's working for — company, team, stage, current focus |
-| `voice-and-brand.md` | Tells Claude how to write in your company's voice |
+| `company.md` | Who you are — company, team, stage, what's active right now |
+| `brand.md` | How you sound — writing style, tone, words you never use |
 
-These are the difference between a brain that knows your company and a folder full of files. Fill them once, update them when things change.
+Fill them once during setup. Update them whenever things change — just tell Claude and it edits the file directly.
 
 ---
 
-## Decisions get their own folder
+## Team roster
 
-Most knowledge systems treat decisions like any other note. This one doesn't.
-
-Decisions go in `03-decisions/` with a dated filename and their reasoning captured — what was decided, why, what alternatives were considered, who was involved. Six months later when someone asks "why did we pick X over Y?", the answer is there.
+`team/roster.md` tracks who's on the team and what they own. When you mention a new hire or role change, Claude updates the roster and confirms. Ask "who owns X?" and Claude checks here first.
 
 ---
 
 ## The safety rule
 
-Before Claude moves, overwrites, or deletes any file, it shows you the plan first and waits for your go-ahead. Always.
+Claude never moves, overwrites, or deletes a file without showing you exactly what it's about to do and waiting for your confirmation.
 
 ---
 
 ## License
 
-MIT. Free to use, change, share, and build on. See `LICENSE`.
+MIT. Use it, fork it, build on it. See `LICENSE`.
 
 ---
 
