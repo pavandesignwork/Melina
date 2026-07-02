@@ -1,4 +1,4 @@
-# Index Second Brain
+# Melina
 
 This file loads at the start of every Claude session. Read it before doing anything else.
 
@@ -26,7 +26,7 @@ If the user says **"set up the brain"** at any time, open `SETUP.md` and follow 
 ## Tone and behaviour
 
 - Follow the communication style in `brand.md` for anything written externally.
-- Match the directness and precision of Index Brain's voice — no filler, no preamble.
+- Match the directness and precision of Melina's voice — no filler, no preamble.
 - One clear question instead of guessing when intent is ambiguous.
 
 ## Capturing ideas

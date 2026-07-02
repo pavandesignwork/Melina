@@ -1,6 +1,6 @@
-# Index Second Brain
+# Melina
 
-![Index Second Brain](assets/banner.png)
+![Melina](assets/Melina.png)
 
 A free, open-source company knowledge system for Claude.
 
@@ -47,7 +47,7 @@ Drop notes in `capture/inbox.md`. Say "process the inbox" to file them. Ask Clau
 ## What's inside
 
 ```
-index-second-brain/
+melina/
 ├── brain.md          instructions Claude reads every session
 ├── SETUP.md          the one-time company setup Claude runs for you
 ├── company.md        who you are — team, stage, current focus
